@@ -10,9 +10,11 @@ public class Player : MonoBehaviour {
     public float lastTime = 0f;
 
     public BanlanceIndicator indicator;
+    public GameOver gameOver;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+
+    void Start () {
         Random.InitState(System.Guid.NewGuid().GetHashCode());
 	}
 	
@@ -29,6 +31,8 @@ public class Player : MonoBehaviour {
         if (balance > limit || balance < 0)
         {
             Debug.Log("game over");
+            gameOver.ShowOver();
+
         }
 
         if (Input.GetKeyDown("z"))
