@@ -33,7 +33,7 @@ namespace UnityStandardAssets._2D
         private void FixedUpdate()
         {
 
-            Debug.Log("2DUserControl FixedUpdate");
+            //Debug.Log("2DUserControl FixedUpdate");
 
             // Read the inputs.
             bool crouch = Input.GetKey(KeyCode.LeftControl);

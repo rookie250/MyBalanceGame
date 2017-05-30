@@ -32,6 +32,7 @@ public class Player : MonoBehaviour {
         {
             Debug.Log("game over");
             gameOver.ShowOver();
+            enabled = false;
 
         }
 
@@ -44,7 +45,7 @@ public class Player : MonoBehaviour {
         {
             balance += 5;
         }
-        Debug.Log(balance);
+        //Debug.Log(balance);
 
         indicator.SetText(balance);
 
@@ -53,7 +54,7 @@ public class Player : MonoBehaviour {
     private void ForceAdd() {
         int random = Random.Range(-20, 20);
         balance += random;
-        Debug.Log(balance);
+        //Debug.Log(balance);
     }
 
     private void OnBecameInvisible()

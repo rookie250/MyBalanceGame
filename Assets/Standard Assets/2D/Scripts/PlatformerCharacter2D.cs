@@ -34,7 +34,7 @@ namespace UnityStandardAssets._2D
 
         private void FixedUpdate()
         {
-            Debug.Log("Character2D FixedUpdate");
+            //Debug.Log("Character2D FixedUpdate");
 
             m_Grounded = false;
 
