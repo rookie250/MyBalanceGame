@@ -59,6 +59,7 @@ public class Player : MonoBehaviour {
 
     private void OnBecameInvisible()
     {
-        Destroy(gameObject);
+        gameOver.ShowOver();
+        enabled = false;
     }
 }
