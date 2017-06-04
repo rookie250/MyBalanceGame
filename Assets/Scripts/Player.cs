@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
-    public int balance = 50;
+    public static int balance = 50;
     public int limit = 100;
     public float updateRate = 2f; // 每隔2秒调用一次
     public float lastTime = 0f;
@@ -47,7 +47,7 @@ public class Player : MonoBehaviour {
         }
         //Debug.Log(balance);
 
-        indicator.SetText(balance);
+     
 
     }
 

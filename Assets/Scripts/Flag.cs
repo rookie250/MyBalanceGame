@@ -2,27 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Coin : MonoBehaviour {
+public class Flag : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            GameManager.score += 10;
-            Destroy(this.gameObject);
+            Debug.Log("You Win");
 
 
         }
     }
+
 }

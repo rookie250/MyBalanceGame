@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameOver : MonoBehaviour {
     private Animator animator;
+    public Text text;
 
     // Use this for initialization
     private void Awake() // 适合加载资源的时候使用

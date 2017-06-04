@@ -5,12 +5,16 @@ using UnityEngine.UI;
 
 public class BanlanceIndicator : MonoBehaviour {
 
-    public Text text;
+    public Slider slider;
+    private float mVio = 0.0f;
+    public float mySmoothTime = 0.2f;
 
-    public void SetText(int balance)
+    private void Update()
     {
-        text.text = "Balance:" + balance;
-
+        float balance = Player.balance;
+        float rate = balance / 100;
+        float smooth = Mathf.SmoothDamp(slider.value, rate, ref mVio, mySmoothTime);
+        slider.value = smooth;
     }
 
 
