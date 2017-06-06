@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Flag : MonoBehaviour {
+    public GameObject hud;
+    // Use this for initialization
+    private void Awake()
+    {
+    }
 
-	// Use this for initialization
-	void Start () {
+    void Start () {
 		
 	}
 
@@ -19,10 +23,12 @@ public class Flag : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("You Win");
-
+            GameOver gameOver = hud.GetComponent<GameOver>();
+            gameOver.ShowWin();
 
         }
     }
+
+      
 
 }
