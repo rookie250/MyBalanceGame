@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 1d96b3c6da0e5a74fa2d9c739c0d0d51
+timeCreated: 1497271884
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: SimSun-ExtB
+  fontNames:
+  - SimSun-ExtB
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

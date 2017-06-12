@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 4b180c9d2078ee245a2f0f5c0f564362
+timeCreated: 1497271894
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Javanese Text
+  fontNames:
+  - Javanese Text
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

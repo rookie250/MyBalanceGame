@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Flag : MonoBehaviour {
     public GameObject hud;
-    // Use this for initialization
+
     private void Awake()
     {
     }
@@ -25,7 +26,6 @@ public class Flag : MonoBehaviour {
         {
             GameOver gameOver = hud.GetComponent<GameOver>();
             gameOver.ShowWin();
-
         }
     }
 
