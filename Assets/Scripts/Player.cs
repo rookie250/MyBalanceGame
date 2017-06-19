@@ -21,12 +21,7 @@ public class Player : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        float time = Time.time;
-        if (time - lastTime > updateRate)  // 每隔2秒 加一个随机的力，判断
-        {
-            lastTime = time;
-            ForceAdd();
-        }
+  
 
         if (balance > limit || balance < 0)
         {
@@ -45,21 +40,42 @@ public class Player : MonoBehaviour {
         {
             balance += 5;
         }
-        //Debug.Log(balance);
-
-     
-
     }
 
     private void ForceAdd() {
-        int random = Random.Range(-20, 20);
-        balance += random;
-        //Debug.Log(balance);
+        if (balance < 50)
+        {
+            int random1 = Random.Range(-20, 0);
+            balance += random1;
+        }
+        else if (balance > 50)
+        {
+            int random2 = Random.Range(0, 20);
+            balance += random2;
+        }else {
+            int random = Random.Range(-20, 20);
+            balance += random;
+        }
+
     }
+
+    
 
     private void OnBecameInvisible()
     {
         gameOver.ShowOver();
         enabled = false;
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        float time = Time.time;
+        if (time - lastTime > updateRate)  // 每隔2秒 加一个随机的力，判断
+        {
+            lastTime = time;
+            ForceAdd();
+        }
+
+    }
+
 }
