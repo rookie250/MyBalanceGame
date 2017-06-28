@@ -588,11 +588,12 @@ PlayerSettings:
     daydream:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    UNet: 1
   facebookSdkVersion: 7.9.1
   apiCompatibilityLevel: 2
-  cloudProjectId: 
-  projectName: 
-  organizationId: 
+  cloudProjectId: c4e59e71-82f4-4192-8370-5acba6af1c81
+  projectName: MyBalanceGame
+  organizationId: mingzhou
   cloudEnabled: 0
   enableNewInputSystem: 0

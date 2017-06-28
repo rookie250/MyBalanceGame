@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityStandardAssets._2D;
+using UnityEngine.Advertisements;
 
 public class GameOver : MonoBehaviour {
     private Animator animator;
@@ -37,12 +38,11 @@ public class GameOver : MonoBehaviour {
         if (muteToggle.isOn == false) // 如果没有勾选，说明不是静音
         {                            
             AudioListener.volume = 1f; // 设置为最大音量
-            AudioListener.volume = slider.value; // 
+            AudioListener.volume = slider.value; // 设置slider的值
         }
         else
         {
             AudioListener.volume = 0f;
-
         }
     }
 
@@ -52,8 +52,10 @@ public class GameOver : MonoBehaviour {
 
     public void ShowWin() {
         animator.SetTrigger("Win");
-        player.enabled = false;
-        menuButton.enabled = false;
+        //player.enabled = false;
+        //menuButton.enabled = false;
+        ShowAds();
+
         
     }
 
@@ -66,10 +68,35 @@ public class GameOver : MonoBehaviour {
     private void MenuButtonDidAction() {
         menu.SetActive(true);
         Time.timeScale = 0;
+
     }
 
     private void ConfirmButtonDidAction() {
         menu.SetActive(false);
         Time.timeScale = 1;
     }
+
+    public void ShowAds() {
+        ShowOptions options = new ShowOptions { resultCallback = AdsResult };
+        Advertisement.Show("video", options);
+    }
+
+    private void AdsResult(ShowResult  result) {
+        switch (result)
+        {
+            case ShowResult.Finished:
+                Debug.Log("The ad was successfully shown.");
+                //
+                // YOUR CODE TO REWARD THE GAMER
+                // Give coins etc.
+                break;
+            case ShowResult.Skipped:
+                Debug.Log("The ad was skipped before reaching the end.");
+                break;
+            case ShowResult.Failed:
+                Debug.LogError("The ad failed to be shown.");
+                break;
+        }
+    }
+
 }
