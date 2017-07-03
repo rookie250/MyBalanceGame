@@ -17,6 +17,7 @@ public class GameOver : MonoBehaviour {
     public Button confirmButton;
     public Toggle muteToggle;
     public Slider slider;
+    public Image[] foreStarImages;
 
     // Use this for initialization
     private void Awake() // 适合加载资源的时候使用
@@ -27,6 +28,11 @@ public class GameOver : MonoBehaviour {
         button.onClick.AddListener(ButtonDidAction);
         menuButton.onClick.AddListener(MenuButtonDidAction);
         confirmButton.onClick.AddListener(ConfirmButtonDidAction);
+
+        foreach (Image image in foreStarImages)
+        {
+            image.enabled = false;
+        }
     }
 
     void Start() {
